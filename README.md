@@ -11,8 +11,9 @@ hugo new post/my-first-post.md
 3、回到quickstart目录执行：
 hugo
 
-4、git add -A
-
-5、git commit -m "[介绍，随便写点什么，比如日期]"
-
-6、git push -u origin master
+4、命令行发布：  
+git add -A  
+git commit -m "[介绍，随便写点什么，比如日期]"  
+git push -u origin master  
+或  
+SourceTree
