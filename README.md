@@ -1,4 +1,8 @@
 # olivercm.github.io
+修改配置文件：  
+quickstart/config.toml
+
+##### 发布文章步骤：
 1、quickstart目录下执行：
 hugo new post/my-first-post.md
 
