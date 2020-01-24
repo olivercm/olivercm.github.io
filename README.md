@@ -10,7 +10,9 @@ hugo server -D
 1、quickstart目录下执行：  
 hugo new post/my-first-post.md
 
-2、修改content下创建的md文件中的draft为false，编辑文章，增加tags、categories 
+2、修改content下创建的md文件中的draft为false，编辑文章，增加tags、categories   
+命令行： treer -d 文件夹  
+可以打印出目录结构  
 
 3、回到quickstart目录执行：  
 hugo
