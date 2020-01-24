@@ -10,7 +10,7 @@ hugo server -D
 1、quickstart目录下执行：  
 hugo new post/my-first-post.md
 
-2、修复创建的md文件中的draft为false，编辑文章
+2、修改content下创建的md文件中的draft为false，编辑文章，增加tags、categories 
 
 3、回到quickstart目录执行：  
 hugo
