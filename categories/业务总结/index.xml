@@ -6,10 +6,19 @@
     <description>Recent content in 业务总结 on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 25 Jan 2020 17:33:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 17:12:43 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2019年项目重构总结</title>
+      <link>http://localhost:1313/post/2019-refactoring/</link>
+      <pubDate>Tue, 28 Jan 2020 17:12:43 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2019-refactoring/</guid>
+      <description>首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个</description>
+    </item>
     
     <item>
       <title>Android Weex js文件缓存实现</title>

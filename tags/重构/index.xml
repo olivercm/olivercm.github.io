@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>重构 on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/tags/%E9%87%8D%E6%9E%84/</link>
+    <description>Recent content in 重构 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jan 2020 17:12:43 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E9%87%8D%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019年项目重构总结</title>
+      <link>http://localhost:1313/post/2019-refactoring/</link>
+      <pubDate>Tue, 28 Jan 2020 17:12:43 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2019-refactoring/</guid>
+      <description>首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个</description>
+    </item>
+    
+  </channel>
+</rss>
