@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>golang echo日志 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="cm" /><meta name="description" content="日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/golang_echo_log/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="golang echo日志" />
+<meta property="og:description" content="日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/golang_echo_log/" />
+<meta property="article:published_time" content="2020-01-30T14:06:21+08:00" />
+<meta property="article:modified_time" content="2020-01-30T14:06:21+08:00" />
+<meta itemprop="name" content="golang echo日志">
+<meta itemprop="description" content="日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging.">
+<meta itemprop="datePublished" content="2020-01-30T14:06:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-30T14:06:21&#43;08:00" />
+<meta itemprop="wordCount" content="877">
+
+
+
+<meta itemprop="keywords" content="echo日志,golang," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="golang echo日志"/>
+<meta name="twitter:description" content="日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">CM的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">CM的博客</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">golang echo日志</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-30 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
+            </div>
+          <span class="more-meta"> 877 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging.log、record.log，同时也支持输出到控制台。其中interface.log用于记录接口访问日志，logging.log用于记录代码打点日志，record.log用于记录数据统计日志。go语言自带的log、fmt等只能输出到控制台，并不计入日志。日志写入文件及读写权限使用开源项目<a href="https://github.com/natefinch/lumberjack">lumberjack</a>中的chown.go、chown_linux.go、logger.go（删除其中不相关的代码）。</p>
+<p>通过<a href="https://help.aliyun.com/document_detail/72561.html?spm=a2c4g.11186623.2.59.5e977812fl5xA1">Logtail采集ECS日志</a>，<a href="https://www.alibabacloud.com/help/zh/doc-detail/29002.htm?spm=a2c63.p38356.b99.449.41b92d194yoTL2">日志服务</a>采集到日志后，支持投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/29002.htm?spm=a2c63.p38356.b99.449.41b92d194yoTL2">阿里云OSS</a>，再投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/111044.htm">DLA</a>，DLA中建立数据库表映射关系，进行数据统计计算。也支持投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/68322.htm?spm=a2c63.p38356.b99.456.53ee1587xeA7U7">MaxCompute</a>，关联数据库表进行数据统计计算。暂时没有日志轮询，等有需要可以考虑，阿里云也是支持的</p>
+<p>echo、gommon都属于LabStack开源项目，https://github.com/labstack</p>
+<p>1、源码修改。<br>
+因为echo目前不支持统一打印出请求参数，在echo的logger.go文件的LoggerWithConfig方法中新增一个case，代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">case</span> <span class="s">&#34;post_form&#34;</span><span class="p">:</span>
+   <span class="nx">form</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">c</span><span class="p">.</span><span class="nf">FormParams</span><span class="p">(</span><span class="p">)</span>
+   <span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">buf</span><span class="p">.</span><span class="nf">WriteString</span><span class="p">(</span><span class="nx">form</span><span class="p">.</span><span class="nf">Encode</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+   <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>2、echo的logger配置。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//设置接口log
+</span><span class="c1"></span><span class="nx">interfaceLog</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">logrecord</span><span class="p">.</span><span class="nx">Logger</span><span class="p">{</span>
+       <span class="nx">Filename</span><span class="p">:</span> <span class="s">&#34;log/interface.log&#34;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">interfaceWriter</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">MultiWriter</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="nx">interfaceLog</span><span class="p">)</span>
+<span class="nx">e</span><span class="p">.</span><span class="nf">Use</span><span class="p">(</span><span class="nx">middleware</span><span class="p">.</span><span class="nf">LoggerWithConfig</span><span class="p">(</span><span class="nx">middleware</span><span class="p">.</span><span class="nx">LoggerConfig</span><span class="p">{</span>
+       <span class="nx">Format</span><span class="p">:</span> <span class="s">`</span><span class="s">{</span><span class="s">&#34;time&#34;:&#34;$</span><span class="s">{</span><span class="s">time_rfc3339}&#34;,&#34;remote_ip&#34;:&#34;$</span><span class="s">{</span><span class="s">remote_ip}&#34;,&#34;host&#34;:&#34;$</span><span class="s">{</span><span class="s">host}&#34;,</span><span class="s">`</span> <span class="o">+</span>
+              <span class="s">`</span><span class="s">&#34;method&#34;:&#34;$</span><span class="s">{</span><span class="s">method}&#34;,&#34;uri&#34;:&#34;$</span><span class="s">{</span><span class="s">uri}&#34;,&#34;post_form&#34;:&#34;$</span><span class="s">{</span><span class="s">post_form}&#34;,&#34;status&#34;:$</span><span class="s">{</span><span class="s">status},&#34;latency&#34;:$</span><span class="s">{</span><span class="s">latency},</span><span class="s">`</span> <span class="o">+</span>
+              <span class="s">`</span><span class="s">&#34;latency_human&#34;:&#34;$</span><span class="s">{</span><span class="s">latency_human}&#34;,&#34;bytes_in&#34;:$</span><span class="s">{</span><span class="s">bytes_in},</span><span class="s">`</span> <span class="o">+</span>
+              <span class="s">`</span><span class="s">&#34;bytes_out&#34;:$</span><span class="s">{</span><span class="s">bytes_out}}</span><span class="s">`</span> <span class="o">+</span> <span class="s">&#34;\n&#34;</span><span class="p">,</span>
+       <span class="nx">Output</span><span class="p">:</span> <span class="nx">interfaceWriter</span><span class="p">,</span>
+<span class="p">}</span><span class="p">)</span><span class="p">)</span>
+
+<span class="c1">//设置log
+</span><span class="c1"></span><span class="nx">commonLog</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">logrecord</span><span class="p">.</span><span class="nx">Logger</span><span class="p">{</span>
+       <span class="nx">Filename</span><span class="p">:</span> <span class="s">&#34;log/logging.log&#34;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="nx">commonLogWriter</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">MultiWriter</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Stdout</span><span class="p">,</span> <span class="nx">commonLog</span><span class="p">)</span>
+<span class="nx">log</span><span class="p">.</span><span class="nf">SetOutput</span><span class="p">(</span><span class="nx">commonLogWriter</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>3、log打印。<br>
+调用接口，会自动输入到interface.log文件；logging.log需要各个地方手动打日志或者有错误时自动输入。手动打日志，需要引用gommon的log。数据统计日志，配置一套类似commonLog就可以了，打到record.log。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">import</span> <span class="s">&#34;github.com/labstack/gommon/log&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>4、日志严重程度。<br>
+Fatal表示重大错误，Error表示资源或需求得不到满足，Warning表示并不一定是个错误但还是需要引起注意，Info表示不是错误只是一个信息，Debug表示这是给内部开发人员用于调试程序</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">cm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-01-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/echo%E6%97%A5%E5%BF%97/">echo日志</a>
+          <a href="/tags/golang/">golang</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/group_buying/">
+            <span class="next-text nav-default">拼团</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hzcaimin@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/olivercm" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">cm</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
