@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>2019年项目重构总结 - Even - A super concise theme for Hugo</title>
+  <title>2019年项目重构 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -38,22 +38,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="2019年项目重构总结" />
+<meta property="og:title" content="2019年项目重构" />
 <meta property="og:description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/2019-refactoring/" />
 <meta property="article:published_time" content="2020-01-28T17:12:43+08:00" />
 <meta property="article:modified_time" content="2020-01-28T17:12:43+08:00" />
-<meta itemprop="name" content="2019年项目重构总结">
+<meta itemprop="name" content="2019年项目重构">
 <meta itemprop="description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个">
 <meta itemprop="datePublished" content="2020-01-28T17:12:43&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-28T17:12:43&#43;08:00" />
-<meta itemprop="wordCount" content="588">
+<meta itemprop="wordCount" content="639">
 
 
 
 <meta itemprop="keywords" content="重构," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2019年项目重构总结"/>
+<meta name="twitter:title" content="2019年项目重构"/>
 <meta name="twitter:description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个"/>
 
 <!--[if lte IE 9]>
@@ -117,14 +117,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">2019年项目重构总结</h1>
+      <h1 class="post-title">2019年项目重构</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-01-28 </span>
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 588 words </span>
+          <span class="more-meta"> 639 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -142,6 +142,7 @@
 <p>看看数据库表关联关系设计是否正确，一对一、一对多、多对多，相对核心的业务，可以做一些重构。比如互联网教育的课程模块，用户提交作业之前设计成多对多，但一个用户可以提交多份作业，每份作业属于单个用户，应该是一对多，根据当时的情况，涉及范围比较大，需要重构，开发、测试人员在测试环境充分测试，问题不大。看业务模块涉及到的表结构，再看看产品界面，基本能理解业务，避免陷入过多代码细节。</p>
 <p>清理依赖的第三方服务。比如，之前直播用的目睹，数据库表，代码很多用的都是目睹id，后面用了阿里云直播，目睹id就可以用频道表id替代。同时接口返回也用频道表id替代，范围比较大，减少前端修改。</p>
 <p>没有再用到的表加_del后缀。可以写代码检测，找出后人工检查一遍，算是清理数据库表。</p>
+<p>业务内部拆分。比如，用户上传的视频作业跟内部人员上传的课程章节视频在后台管理系统，会有不同的搜索过滤。</p>
 <p>产品提的新需求、测试提的bug，发现之前的有一些问题，顺便重构，其他的可以先不动，优化无止境。多少人，多少代码量，大体上决定了最后能改成什么样，量力而行。</p>
 <p>新项目就是重新开始，避免之前犯的错误，表结构设计好，否则后面改动代价会比较大。接口分离，封装的函数尽量小一些，减少兼容，便于后期维护。可以找一些架构方面的书看看，实践。</p>
 
@@ -167,7 +168,11 @@
           <a href="/tags/%E9%87%8D%E6%9E%84/">重构</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/group_buying/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">拼团</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/android-weex-js-cache/">
             <span class="next-text nav-default">Android Weex js文件缓存实现</span>
             <span class="next-text nav-mobile">Next</span>

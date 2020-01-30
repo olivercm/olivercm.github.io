@@ -6,13 +6,22 @@
     <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jan 2020 17:12:43 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 11:41:05 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>2019年项目重构总结</title>
+      <title>拼团</title>
+      <link>http://localhost:1313/post/group_buying/</link>
+      <pubDate>Thu, 30 Jan 2020 11:41:05 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/group_buying/</guid>
+      <description>不管是正常支付还是拼团支付，都需要在pay表有记录，pay表type字段新增：课程拼团，type用来区分购买的商品类型，status字段新增</description>
+    </item>
+    
+    <item>
+      <title>2019年项目重构</title>
       <link>http://localhost:1313/post/2019-refactoring/</link>
       <pubDate>Tue, 28 Jan 2020 17:12:43 +0800</pubDate>
       
@@ -39,7 +48,7 @@
     </item>
     
     <item>
-      <title>年度报告总结</title>
+      <title>年度报告</title>
       <link>http://localhost:1313/post/annual-report/</link>
       <pubDate>Fri, 24 Jan 2020 11:35:07 +0800</pubDate>
       
