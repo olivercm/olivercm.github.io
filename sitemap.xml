@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/2019-refactoring/</loc>
+    <loc>http://localhost:1313/post/2019-backend-refactoring/</loc>
     <lastmod>2020-01-28T17:12:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E9%87%8D%E6%9E%84/</loc>
+    <loc>http://localhost:1313/tags/%E5%90%8E%E7%AB%AF%E9%87%8D%E6%9E%84/</loc>
     <lastmod>2020-01-28T17:12:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

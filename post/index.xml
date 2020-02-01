@@ -30,11 +30,11 @@
     </item>
     
     <item>
-      <title>2019年项目重构</title>
-      <link>http://localhost:1313/post/2019-refactoring/</link>
+      <title>2019年后端重构</title>
+      <link>http://localhost:1313/post/2019-backend-refactoring/</link>
       <pubDate>Tue, 28 Jan 2020 17:12:43 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/2019-refactoring/</guid>
+      <guid>http://localhost:1313/post/2019-backend-refactoring/</guid>
       <description>首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个</description>
     </item>
     
