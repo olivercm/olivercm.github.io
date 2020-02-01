@@ -6,13 +6,22 @@
     <description>Recent content in Posts on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Jan 2020 14:06:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 20:04:05 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>golang echo日志</title>
+      <title>积分、优惠券设计</title>
+      <link>http://localhost:1313/post/points_coupon_design/</link>
+      <pubDate>Sat, 01 Feb 2020 20:04:05 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/points_coupon_design/</guid>
+      <description>积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积</description>
+    </item>
+    
+    <item>
+      <title>golang echo日志打点、接口访问、数据统计</title>
       <link>http://localhost:1313/post/golang_echo_log/</link>
       <pubDate>Thu, 30 Jan 2020 14:06:21 +0800</pubDate>
       

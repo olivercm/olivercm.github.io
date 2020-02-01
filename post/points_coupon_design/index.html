@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>2019年后端重构 - CM的博客</title>
+  <title>积分、优惠券设计 - CM的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="cm" /><meta name="description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="cm" /><meta name="description" content="积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/2019-backend-refactoring/" />
+<link rel="canonical" href="http://localhost:1313/post/points_coupon_design/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,23 +38,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="2019年后端重构" />
-<meta property="og:description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个" />
+<meta property="og:title" content="积分、优惠券设计" />
+<meta property="og:description" content="积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/2019-backend-refactoring/" />
-<meta property="article:published_time" content="2020-01-28T17:12:43+08:00" />
-<meta property="article:modified_time" content="2020-01-28T17:12:43+08:00" />
-<meta itemprop="name" content="2019年后端重构">
-<meta itemprop="description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个">
-<meta itemprop="datePublished" content="2020-01-28T17:12:43&#43;08:00" />
-<meta itemprop="dateModified" content="2020-01-28T17:12:43&#43;08:00" />
-<meta itemprop="wordCount" content="1249">
+<meta property="og:url" content="http://localhost:1313/post/points_coupon_design/" />
+<meta property="article:published_time" content="2020-02-01T20:04:05+08:00" />
+<meta property="article:modified_time" content="2020-02-01T20:04:05+08:00" />
+<meta itemprop="name" content="积分、优惠券设计">
+<meta itemprop="description" content="积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积">
+<meta itemprop="datePublished" content="2020-02-01T20:04:05&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-01T20:04:05&#43;08:00" />
+<meta itemprop="wordCount" content="575">
 
 
 
-<meta itemprop="keywords" content="后端重构," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2019年后端重构"/>
-<meta name="twitter:description" content="首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。 老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个"/>
+<meta itemprop="keywords" content="积分,优惠券," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="积分、优惠券设计"/>
+<meta name="twitter:description" content="积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -117,15 +117,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">2019年后端重构</h1>
+      <h1 class="post-title">积分、优惠券设计</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-01-28 </span>
+        <span class="post-time"> 2020-02-01 </span>
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 1249 words </span>
-          <span class="more-meta"> 3 mins read </span>
+          <span class="more-meta"> 575 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -137,20 +137,9 @@
   </div>
 </div>
     <div class="post-content">
-      <p>首先要考虑的是接不接老项目。有时候会有选项，老项目还是新项目。</p>
-<p>老项目会有一些商业价值，但可能是一个烂摊子，会背锅，主要精力放在架构上，以一个旁观者的身份，平常心看待烂代码，划分业务模块，做一些封装处理。</p>
-<p>清理没有调用的接口、代码，保持业务代码干净。清理接口会有一些风险，可以让前端全局搜索是否有调用。</p>
-<p>看看数据库表关联关系设计是否正确，一对一、一对多、多对多，相对核心的业务，可以做一些重构。比如互联网教育的课程模块，用户提交作业之前设计成多对多，但一个用户可以提交多份作业，每份作业属于单个用户，应该是一对多，根据当时的情况，涉及范围比较大，需要重构，开发、测试人员在测试环境充分测试，问题不大。看业务模块涉及到的表结构，再看看产品界面，基本能理解业务，避免陷入过多代码细节。</p>
-<p>清理依赖的第三方服务。比如，之前直播用的目睹，数据库表，代码很多用的都是目睹id，后面用了阿里云直播，目睹id就可以用频道表id替代。同时接口返回也用频道表id替代，范围比较大，减少前端修改。</p>
-<p>没有再用到的表加_del后缀。可以写代码检测，找出后人工检查一遍，算是清理数据库表。</p>
-<p>业务内部拆分。比如，用户上传的视频作业跟内部人员上传的课程章节视频在后台管理系统，会有不同的搜索过滤。再举个栗子，课程作业只需要显示最新的那一份，定义为重新提交作业，上传了新的，老的就可以标记为删除。俱乐部却不同，需要显示用户上传过的所有作业。</p>
-<p>接口拆分，保持接口功能单一。不同业务用不同接口，如果用同一个接口，业务变化时，会有各种判断，返回给前端的字段变化，慢慢变得越来越混乱。</p>
-<p>了解数据规模。比如，老师工作台课程列表，分为有待办任务和没有待办任务。根据业务情况，每天18点都会有服务号推送给课程老师，还有多少未点评的作业，正常情况下，在一段时间内，各位老师都会清理待办任务。那有待办任务的列表就会比较少，接口就可以一次性返回。没有待办任务的列表随着时间积累慢慢变多，因为课程变多，接口就需要分页。</p>
-<p>修改比较别扭的部分。比如，提交作业的用户id保存在in_channel_id，in_channel_id的命名由来是之前用了目睹直播，目睹id在数据保存在channel_id，被认为是外部频道id，in_channel_id就作为内部频道id，表又是多块业务公用，偷个懒就找个字段插了，用type字段区分。每次用到都感觉很奇怪，还不如再加一列customer_id，做数据订正，对应代码也做调整。</p>
-<p>找之前负责这块业务的人聊聊，可能能有一些有用的信息。或者对比类似业务怎么写的，借鉴。</p>
-<p>产品提的新需求、测试提的bug，发现之前的有一些问题，顺便重构，其他的可以先不动，优化无止境。多少人，多少代码量，大体上决定了最后能改成什么样，量力而行。</p>
-<p>新项目就是重新开始，避免之前犯的错误，表结构设计好，否则后面改动代价会比较大。接口分离，封装的函数尽量小一些，减少兼容，便于后期维护。可以找一些架构方面的书看看，实践。</p>
-<p>不管接的是新项目，还是老项目，都需要多用，多思考。</p>
+      <p>积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积分数，积分操作类型。设计一定的规则，比如100积分抵1块，支付的时候，默认选上，pay表有一列，记录购买XX时消耗的积分，用户积分表也插一条。积分过期会麻烦一些，按月过期，需要定时任务判断是否是每月第一天0点，也就是上个月最后一天24点，这就还需要有一个地方记录用户领取的积分什么时候过期，可以另外建张表，因为不是所有用户都会有积分，这样用户表可以少一列。保存为json格式，类似于{&ldquo;202009&rdquo;:500,&ldquo;202010&rdquo;:500}，表示2020年9月和10月，都有500积分过期，这就需要在领取的时候根据积分过期时间加入到json，消耗积分时优先消耗早期的积分，这需要先给json的日期排序。</p>
+<p>优惠券会稍有不同，首先会有一张优惠券表，保存优惠券的名称、金额、过期时间，属于哪个课程。发放优惠券，所以会有一张用户优惠券表，谁，哪个优惠券，是否已经使用。支付时筛选未过期的优惠券，pay表会有一列优惠券id，支付成功回调更新用户优惠券表的是否已经使用。优惠券可以给指定的多个用户发送，也可以给购买了某些课程的用户发送。</p>
+<p>大体类似，会有领取/发放，消耗/使用，过期。</p>
 
     </div>
 
@@ -162,7 +151,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-01-28
+        2020-02-01
         
     </span>
   </p>
@@ -171,16 +160,13 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/%E5%90%8E%E7%AB%AF%E9%87%8D%E6%9E%84/">后端重构</a>
+          <a href="/tags/%E7%A7%AF%E5%88%86/">积分</a>
+          <a href="/tags/%E4%BC%98%E6%83%A0%E5%88%B8/">优惠券</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/group_buying/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">拼团</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/android-weex-js-cache/">
-            <span class="next-text nav-default">Android Weex js文件缓存实现</span>
+        
+        <a class="next" href="/post/golang_echo_log/">
+            <span class="next-text nav-default">golang echo日志打点、接口访问、数据统计</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

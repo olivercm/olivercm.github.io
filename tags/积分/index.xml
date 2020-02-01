@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>积分 on CM的博客</title>
+    <link>http://localhost:1313/tags/%E7%A7%AF%E5%88%86/</link>
+    <description>Recent content in 积分 on CM的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Feb 2020 20:04:05 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E7%A7%AF%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>积分、优惠券设计</title>
+      <link>http://localhost:1313/post/points_coupon_design/</link>
+      <pubDate>Sat, 01 Feb 2020 20:04:05 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/points_coupon_design/</guid>
+      <description>积分会有一张积分活动表，活动名称、发放总数、每个用户可领取的数量，是否上架、活动截止时间。领取积分，会有一张用户积分表，谁，哪个积分活动，积</description>
+    </item>
+    
+  </channel>
+</rss>
