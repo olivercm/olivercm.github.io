@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/golang/crud/</loc>
+    <loc>http://localhost:1313/tags/crud/</loc>
     <lastmod>2020-01-24T20:17:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

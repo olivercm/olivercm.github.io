@@ -48,7 +48,7 @@
 <meta itemprop="description" content="日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging.">
 <meta itemprop="datePublished" content="2020-01-30T14:06:21&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-30T14:06:21&#43;08:00" />
-<meta itemprop="wordCount" content="877">
+<meta itemprop="wordCount" content="845">
 
 
 
@@ -124,7 +124,7 @@
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 877 words </span>
+          <span class="more-meta"> 845 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -139,7 +139,7 @@
     <div class="post-content">
       <p>日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging.log、record.log，同时也支持输出到控制台。其中interface.log用于记录接口访问日志，logging.log用于记录代码打点日志，record.log用于记录数据统计日志。go语言自带的log、fmt等只能输出到控制台，并不计入日志。日志写入文件及读写权限使用开源项目<a href="https://github.com/natefinch/lumberjack">lumberjack</a>中的chown.go、chown_linux.go、logger.go（删除其中不相关的代码）。</p>
 <p>通过<a href="https://help.aliyun.com/document_detail/72561.html?spm=a2c4g.11186623.2.59.5e977812fl5xA1">Logtail采集ECS日志</a>，<a href="https://www.alibabacloud.com/help/zh/doc-detail/29002.htm?spm=a2c63.p38356.b99.449.41b92d194yoTL2">日志服务</a>采集到日志后，支持投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/29002.htm?spm=a2c63.p38356.b99.449.41b92d194yoTL2">阿里云OSS</a>，再投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/111044.htm">DLA</a>，DLA中建立数据库表映射关系，进行数据统计计算。也支持投递到<a href="https://www.alibabacloud.com/help/zh/doc-detail/68322.htm?spm=a2c63.p38356.b99.456.53ee1587xeA7U7">MaxCompute</a>，关联数据库表进行数据统计计算。暂时没有日志轮询，等有需要可以考虑，阿里云也是支持的</p>
-<p>echo、gommon都属于LabStack开源项目，https://github.com/labstack</p>
+<p>echo、gommon都属于<a href="https://github.com/labstack">LabStack</a></p>
 <p>1、源码修改。<br>
 因为echo目前不支持统一打印出请求参数，在echo的logger.go文件的LoggerWithConfig方法中新增一个case，代码如下：</p>
 <div class="highlight"><div class="chroma">

@@ -20,5 +20,14 @@
       <description>日志部分我们使用echo的logger配置和gommon的log，输出到业务项目文件夹log下的interface.log、logging.</description>
     </item>
     
+    <item>
+      <title>基于graphql&#43;grpc结构的crud生成器</title>
+      <link>http://localhost:1313/post/graphql-grpc-crud-kit/</link>
+      <pubDate>Fri, 24 Jan 2020 20:17:17 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/graphql-grpc-crud-kit/</guid>
+      <description>只需要输入要发布的服务名称，crud对应的数据库表名就可以生成代码。由于需要获取表信息，还需要数据库连接信息。 先编写代码，你希望生成的东西是</description>
+    </item>
+    
   </channel>
 </rss>
