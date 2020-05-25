@@ -6,10 +6,19 @@
     <description>Recent content in Posts on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Feb 2020 20:04:05 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2020 10:48:51 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>广告管理</title>
+      <link>http://localhost:1313/post/advertising-plan/</link>
+      <pubDate>Mon, 25 May 2020 10:48:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/advertising-plan/</guid>
+      <description>后台系统有日期区间、状态（全部、待投放、投放中、已暂停）筛选 列表字段：投放位置、followId、状态、广告样式、曝光次数、点击次数、付费订</description>
+    </item>
     
     <item>
       <title>积分、优惠券设计</title>
