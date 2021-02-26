@@ -6,10 +6,28 @@
     <description>Recent content on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 May 2020 10:48:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Feb 2021 16:32:42 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>解决前端获取下一页，列表数据重复</title>
+      <link>http://localhost:1313/post/back-to-front-end-repeated-list-item/</link>
+      <pubDate>Wed, 24 Feb 2021 16:32:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/back-to-front-end-repeated-list-item/</guid>
+      <description>场景： 前端加载更多，列表数据会重复，但又不是必现。刷新后数据又正常了 经过测试，发现是加载更多时，有新纪录插入数据库，导致返回给前端一条上一页</description>
+    </item>
+    
+    <item>
+      <title>模拟聊天</title>
+      <link>http://localhost:1313/post/simulate-chat/</link>
+      <pubDate>Sun, 14 Jun 2020 19:27:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/simulate-chat/</guid>
+      <description>需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信</description>
+    </item>
     
     <item>
       <title>广告管理</title>

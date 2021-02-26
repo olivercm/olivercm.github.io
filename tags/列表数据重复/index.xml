@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>列表数据重复 on CM的博客</title>
+    <link>http://localhost:1313/tags/%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E9%87%8D%E5%A4%8D/</link>
+    <description>Recent content in 列表数据重复 on CM的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Feb 2021 16:32:42 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E9%87%8D%E5%A4%8D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决前端获取下一页，列表数据重复</title>
+      <link>http://localhost:1313/post/back-to-front-end-repeated-list-item/</link>
+      <pubDate>Wed, 24 Feb 2021 16:32:42 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/back-to-front-end-repeated-list-item/</guid>
+      <description>场景： 前端加载更多，列表数据会重复，但又不是必现。刷新后数据又正常了 经过测试，发现是加载更多时，有新纪录插入数据库，导致返回给前端一条上一页</description>
+    </item>
+    
+  </channel>
+</rss>

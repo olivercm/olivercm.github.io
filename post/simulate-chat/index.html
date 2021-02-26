@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>golang · CM的博客</title>
+  <title>模拟聊天 - CM的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="cm" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="cm" /><meta name="description" content="需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/tags/golang/" />
-  <link href="http://localhost:1313/tags/golang/index.xml" rel="alternate" type="application/rss+xml" title="CM的博客" />
-  <link href="http://localhost:1313/tags/golang/index.xml" rel="feed" type="application/rss+xml" title="CM的博客" />
+<link rel="canonical" href="http://localhost:1313/post/simulate-chat/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,15 +38,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="golang" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/tags/golang/" />
-<meta property="og:updated_time" content="2020-01-30T14:06:21+08:00" />
-<meta itemprop="name" content="golang">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="golang"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:title" content="模拟聊天" />
+<meta property="og:description" content="需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/simulate-chat/" />
+<meta property="article:published_time" content="2020-06-14T19:27:15+08:00" />
+<meta property="article:modified_time" content="2020-06-14T19:27:15+08:00" />
+<meta itemprop="name" content="模拟聊天">
+<meta itemprop="description" content="需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信">
+<meta itemprop="datePublished" content="2020-06-14T19:27:15&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-14T19:27:15&#43;08:00" />
+<meta itemprop="wordCount" content="77">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="模拟聊天"/>
+<meta name="twitter:description" content="需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,38 +114,68 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title tag">
-        <h2 class="archive-name">golang</h2>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">模拟聊天</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-14 </span>
+        
+          <span class="more-meta"> 77 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
       </div>
+    </header>
 
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2020-01-30
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/golang_echo_log/" class="archive-post-link">
-          golang echo日志打点、接口访问、数据统计
-        </a>
-      </span>
-    </div><div class="archive-post">
-      <span class="archive-post-time">
-        2020-01-24
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/graphql-grpc-crud-kit/" class="archive-post-link">
-          基于graphql&#43;grpc结构的crud生成器
-        </a>
-      </span>
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信获取聊天记录。</p>
+
     </div>
-</section>
 
-<nav class="pagination">
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">cm</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-06-14
+        
+    </span>
+  </p>
   
   
-</nav>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/back-to-front-end-repeated-list-item/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">解决前端获取下一页，列表数据重复</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/advertising-plan/">
+            <span class="next-text nav-default">广告管理</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
