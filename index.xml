@@ -6,10 +6,19 @@
     <description>Recent content on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 May 2021 10:46:14 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 May 2021 11:20:25 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>分销商上下级</title>
+      <link>http://localhost:1313/post/sale_distributor_hierarchical/</link>
+      <pubDate>Tue, 11 May 2021 11:20:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/sale_distributor_hierarchical/</guid>
+      <description>分销商表有三个字段：id、level、inviter_id。level表示分销商等级，由小到大0、1、2、3。inviter_id表示当前分</description>
+    </item>
     
     <item>
       <title>成就墙</title>
