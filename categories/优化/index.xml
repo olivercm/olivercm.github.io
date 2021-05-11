@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>优化 on CM的博客</title>
+    <link>http://localhost:1313/categories/%E4%BC%98%E5%8C%96/</link>
+    <description>Recent content in 优化 on CM的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 May 2021 10:46:14 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>成就墙</title>
+      <link>http://localhost:1313/post/achievement_wall/</link>
+      <pubDate>Tue, 11 May 2021 10:46:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/achievement_wall/</guid>
+      <description>有个给小孩子上语文课的外部合作项目，里面有个成就墙的功能。类似于玩游戏，玩到什么程度可以获得成就。 成就分为3种课程类型，比如语文、朗读、音频</description>
+    </item>
+    
+  </channel>
+</rss>

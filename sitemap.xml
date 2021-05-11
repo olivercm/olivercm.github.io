@@ -3,28 +3,49 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2021-02-26T15:35:01+08:00</lastmod>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2021-02-26T15:35:01+08:00</lastmod>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2021-02-26T15:35:01+08:00</lastmod>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2021-02-26T15:35:01+08:00</lastmod>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%88%90%E5%B0%B1%E5%A2%99/</loc>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/achievement_wall/</loc>
+    <lastmod>2021-05-11T10:46:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
