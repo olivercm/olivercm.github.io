@@ -48,7 +48,7 @@
 <meta itemprop="description" content="场景： 前端加载更多，列表数据会重复，但又不是必现。刷新后数据又正常了 经过测试，发现是加载更多时，有新纪录插入数据库，导致返回给前端一条上一页">
 <meta itemprop="datePublished" content="2021-02-24T16:32:42&#43;08:00" />
 <meta itemprop="dateModified" content="2021-02-24T16:32:42&#43;08:00" />
-<meta itemprop="wordCount" content="493">
+<meta itemprop="wordCount" content="504">
 
 
 
@@ -124,8 +124,8 @@
         <div class="post-category">
             <a href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"> 问题解决 </a>
             </div>
-          <span class="more-meta"> 493 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 504 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -177,7 +177,7 @@
 <p>前端请求的时候，携带上次返回的最大id，以此限制下一页数据id范围。sql的where中加 id &lt; 上次返回最大id，同时offset也不需要了，因为offset也会限制数据范围</p>
 <p>前端在数据总条数比当前已经返回的数据条数大的时候，可以继续加载更多。所以返回给前端的数据总条数也需要调整。sql的where中加 id &lt; 第一页返回的最大id，这个id在加载更多时是不变的，这样新插入的数据就不会影响列表数据，第一次请求的时候，后端可以根据page==1，设置一个最大值，比如math.MaxInt64</p>
 <h3 id="heading-4">适用场景：</h3>
-<p>这种解决方法适用于倒序且频繁更新数据的列表。</p>
+<p>这种解决方法适用于倒序且频繁更新数据的列表。参考了微信朋友圈的做法</p>
 
     </div>
 

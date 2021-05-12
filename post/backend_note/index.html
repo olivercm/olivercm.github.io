@@ -48,7 +48,7 @@
 <meta itemprop="description" content="1、用户生日数据库字段用字符串，比如“2012-09-08”，时间戳只能从1970年开始，那之前出生的人时间会有问题。生日的字符串要容易做后">
 <meta itemprop="datePublished" content="2021-05-12T10:22:54&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-12T10:22:54&#43;08:00" />
-<meta itemprop="wordCount" content="475">
+<meta itemprop="wordCount" content="744">
 
 
 
@@ -124,8 +124,8 @@
         <div class="post-category">
             <a href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"> 开发笔记 </a>
             </div>
-          <span class="more-meta"> 475 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 744 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -141,6 +141,28 @@
 <p>2、用户登录、信息存放在不同表。比如用户登录包括mobile（字符串）、微信open_id、union_id等存在customer，用户个人信息存在customer_profile。这样用户登录只需要访问customer表，当需要用户个人信息的时候，才访问customer_profile。其他用户相关另外建表</p>
 <p>3、服务节点最好3个及以上。如果只有1个，那个可能挂掉。如果2个，1个挂掉后，另一个会承担100%的流量，可能扛不住</p>
 <p>4、当业务相似，如果时间不够，可以重新部署一套集群、数据库、redis，代码可以同一套，快速上线。表名都可以不改，表名改后，model、dao、service，基本上都要跟着改。比如课程模式不同，会导致课程字段会不同，但课程下的单元、单元下的课件都是同一套，个别课件类型可做增删。域名，接口名字前缀做修改，传参、返回尽量不做修改，减少和前端调试时间</p>
+<p>5、用户可能在极短的时间内快速点击，导致数据库插入多条数据。可以使用redis的nx命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">locked</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">cache</span><span class="p">.</span><span class="nf">Master</span><span class="p">(</span><span class="p">)</span><span class="p">.</span><span class="nf">Lock</span><span class="p">(</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;NX:xdp:saveTopicDiscussion:%d&#34;</span><span class="p">,</span> <span class="nx">in</span><span class="p">.</span><span class="nx">CustomerId</span><span class="p">)</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">locked</span> <span class="o">||</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="kc">nil</span><span class="p">,</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Errorf</span><span class="p">(</span><span class="s">&#34;请勿重复提交&#34;</span><span class="p">)</span>
+	<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>一般前端也会做限制。还有一种避免数据库重复记录的方法是加唯一索引，但这毕竟后最后一步做限制，前面还是进来了。而且如果后台有删除记录的功能，并且数据库删除标记用的是del_flag（0-未删除 1-删除），可以多次删除，就不能做唯一索引了，用delete_time（删除时间戳）可以</p>
+<p>6、对于用户上传的文字、图片、音视频可以做内容安全检查</p>
+<p>微信：</p>
+<p><a href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/sec-check/security.msgSecCheck.html">https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/sec-check/security.msgSecCheck.html</a></p>
+<p>阿里云：</p>
+<p><a href="https://help.aliyun.com/document_detail/70439.html?spm=a2c4g.11186623.6.701.48537488F4G9tX">https://help.aliyun.com/document_detail/70439.html?spm=a2c4g.11186623.6.701.48537488F4G9tX</a></p>
+<p>7、</p>
 
     </div>
 
@@ -164,7 +186,11 @@
           <a href="/tags/%E5%90%8E%E7%AB%AF/">后端</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/sql_note/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Sql开发笔记</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/sale_distributor_hierarchical/">
             <span class="next-text nav-default">分销商上下级</span>
             <span class="next-text nav-mobile">Next</span>
