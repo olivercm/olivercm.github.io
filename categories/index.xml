@@ -6,10 +6,19 @@
     <description>Recent content in Categories on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 May 2021 11:20:25 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 May 2021 10:22:54 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>开发笔记</title>
+      <link>http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 12 May 2021 10:22:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>分销商</title>

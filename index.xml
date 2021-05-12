@@ -6,10 +6,19 @@
     <description>Recent content on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 May 2021 11:20:25 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 May 2021 10:22:54 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>后端开发笔记</title>
+      <link>http://localhost:1313/post/backend_note/</link>
+      <pubDate>Wed, 12 May 2021 10:22:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/backend_note/</guid>
+      <description>1、用户生日数据库字段用字符串，比如“2012-09-08”，时间戳只能从1970年开始，那之前出生的人时间会有问题。生日的字符串要容易做后</description>
+    </item>
     
     <item>
       <title>分销商上下级</title>
