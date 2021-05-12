@@ -48,7 +48,7 @@
 <meta itemprop="description" content="不管是正常支付还是拼团支付，都需要在pay表有记录，pay表type字段新增：课程拼团，type用来区分购买的商品类型，status字段新增">
 <meta itemprop="datePublished" content="2020-01-30T11:41:05&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-30T11:41:05&#43;08:00" />
-<meta itemprop="wordCount" content="1926">
+<meta itemprop="wordCount" content="2010">
 
 
 
@@ -124,8 +124,8 @@
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 1926 words </span>
-          <span class="more-meta"> 4 mins read </span>
+          <span class="more-meta"> 2010 words </span>
+          <span class="more-meta"> 5 mins read </span>
         
       </div>
     </header>
@@ -198,7 +198,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​</p>
-<p>拼团用户表。 由于存在自动成团，会有合并团的情况，需要记录老团id。比如，分享出去的拼团详情页链接包含group_id，需要接口根据参数返回当前团的信息。status是为了更加方便计算是否成团。robot_info用于存放机器人头像、昵称，其实机器人就是现有用户表里随机取两个，分别取头像、昵称，确保不重复，不会出现相同用户参团，最好用用户id，如果有其他变动也方便改动。</p>
+<p>拼团用户表。 由于存在自动成团，会有合并团的情况，需要记录老团id。比如，分享出去的拼团详情页链接包含group_id，需要接口根据参数返回当前团的信息。status是为了更加方便计算是否成团。robot_info用于存放机器人头像、昵称，其实机器人就是现有用户表里用代码随机取两个（千万不要用sql的rand，这种方式会每行算rand，然后排序，还跟sort buffer等有关，要是内存不够，会用到磁盘，性能很差，explain看看就知道了），分别取头像、昵称，确保不重复，不会出现相同用户参团，最好用用户id，如果有其他变动也方便改动。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
