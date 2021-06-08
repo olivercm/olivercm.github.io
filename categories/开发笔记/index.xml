@@ -17,7 +17,7 @@
       <pubDate>Wed, 12 May 2021 10:23:02 +0800</pubDate>
       
       <guid>http://localhost:1313/post/sql_note/</guid>
-      <description></description>
+      <description>1、做正式sql语句处理前，先在测试环境执行sql语句，看看有没有问题 2、如果在不同的数据库间切换，sql语句的表名前面记得加上数据库名，避</description>
     </item>
     
     <item>

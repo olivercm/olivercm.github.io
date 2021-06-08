@@ -149,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/simulate-chat/</loc>
-    <lastmod>2020-06-14T19:27:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/tags/%E5%B9%BF%E5%91%8A/</loc>
     <lastmod>2020-05-25T10:48:51+08:00</lastmod>
     <changefreq>weekly</changefreq>

@@ -17,7 +17,7 @@
       <pubDate>Wed, 12 May 2021 10:23:02 +0800</pubDate>
       
       <guid>http://localhost:1313/post/sql_note/</guid>
-      <description></description>
+      <description>1、做正式sql语句处理前，先在测试环境执行sql语句，看看有没有问题 2、如果在不同的数据库间切换，sql语句的表名前面记得加上数据库名，避</description>
     </item>
     
     <item>
@@ -63,15 +63,6 @@
       
       <guid>http://localhost:1313/post/back-to-front-end-repeated-list-item/</guid>
       <description>场景： 前端加载更多，列表数据会重复，但又不是必现。刷新后数据又正常了 经过测试，发现是加载更多时，有新纪录插入数据库，导致返回给前端一条上一页</description>
-    </item>
-    
-    <item>
-      <title>模拟聊天</title>
-      <link>http://localhost:1313/post/simulate-chat/</link>
-      <pubDate>Sun, 14 Jun 2020 19:27:15 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/simulate-chat/</guid>
-      <description>需求：销售培训后，正式入职前话术测试。提取最近两个月正式环境销售与外部客户聊天记录中的客户聊天信息，之前已单独部署服务每隔一段时间从企业微信</description>
     </item>
     
     <item>
