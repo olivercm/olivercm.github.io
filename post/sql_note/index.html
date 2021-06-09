@@ -48,7 +48,7 @@
 <meta itemprop="description" content="1、做正式sql语句处理前，先在测试环境执行sql语句，看看有没有问题 2、如果在不同的数据库间切换，sql语句的表名前面记得加上数据库名，避">
 <meta itemprop="datePublished" content="2021-05-12T10:23:02&#43;08:00" />
 <meta itemprop="dateModified" content="2021-05-12T10:23:02&#43;08:00" />
-<meta itemprop="wordCount" content="373">
+<meta itemprop="wordCount" content="372">
 
 
 
@@ -124,7 +124,7 @@
         <div class="post-category">
             <a href="/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"> 开发笔记 </a>
             </div>
-          <span class="more-meta"> 373 words </span>
+          <span class="more-meta"> 372 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -207,7 +207,7 @@
 <span class="k">and</span> <span class="n">customer_id</span> <span class="o">=</span> <span class="mi">88981</span>
 <span class="k">group</span> <span class="k">by</span> <span class="n">a</span><span class="p">.</span><span class="n">item_id</span>
 <span class="p">)</span><span class="n">a</span> 
-<span class="k">left</span> <span class="k">join</span> 
+<span class="k">join</span> 
 <span class="p">(</span>
     <span class="k">select</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">b</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="k">as</span> <span class="n">num</span> <span class="k">from</span> <span class="n">chinese_course_items</span> <span class="n">a</span> 
     <span class="k">join</span> <span class="n">chinese_course_ware</span> <span class="n">b</span> <span class="k">on</span> <span class="n">a</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">chinese_item_id</span> 
