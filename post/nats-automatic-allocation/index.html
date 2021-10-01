@@ -48,7 +48,7 @@
 <meta itemprop="description" content="mq用的是Nats，NATS项目介绍。 server用的是Nats Streaming，消息至少一次传递，可持久化。 mq其实就是生产者、消费者模">
 <meta itemprop="datePublished" content="2021-07-03T16:13:35&#43;08:00" />
 <meta itemprop="dateModified" content="2021-07-03T16:13:35&#43;08:00" />
-<meta itemprop="wordCount" content="838">
+<meta itemprop="wordCount" content="742">
 
 
 
@@ -124,7 +124,7 @@
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 838 words </span>
+          <span class="more-meta"> 742 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -146,7 +146,6 @@
 <p>销售人员离职后，需要把一些未成交的数据批量重新分配给在职的销售。后台可以在开始分配前，设置从哪个离职人员分配给谁，多少条。设置完成后，可以先返回设置成功。然后用redis的NX、EX指令加锁，避免数据重复分配，EX时间是5*数据条数（秒）。同时设置一个redis key，value为数据条数。每分配完（包括调用企业微信外部联系人api转移关系）一条就用redis的DECR指令减1，当减到0时，给指定人员的企业微信应用发送通知，分配成功，转移了多少条数据，之前设置的EX时间相对长，实际系统分配更快，主动通知可以让相关人员知道可以继续下一次的分配了。</p>
 <p>2、模拟聊天自动分配。</p>
 <p>模拟聊天是对刚入职的销售培训话术的系统。用的是线上真实的用户聊天信息，企业微信可以导出一段时间内的聊天信息（这块是单独项目，另外运行的服务），存到数据库，作为用户聊天数据池。根据用户销售信息表、用户openid等信息，可以筛选出用户侧的聊天信息。然后满足一定条件用户的<a href="https://blog.csdn.net/u010433704/article/details/76512549">选一条</a>。选到单个用户后，获取该用户所有聊天内容，分配给销售人员，聊天内容不能重复，用seq表示唯一。订阅端for循环，在内存中判断是否满足业务条件，满足后退出分配。</p>
-<p>mq用的地方不多，暂时也没有做幂等方面的处理。如果有需要可以把client分配前的一些业务信息存到数据库，默认未处理，处理完后标记为已处理，不同的业务放到不同的表。也可以网上找找业界的处理方式</p>
 
     </div>
 
