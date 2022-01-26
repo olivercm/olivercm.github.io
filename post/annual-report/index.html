@@ -48,7 +48,7 @@
 <meta itemprop="description" content="数据分为三类：整体数据、个体数据、统计数据 1、整体数据是所有用户都能看到的项目累计数据，比如累计用户数、视频播放时间、课程数、作业点评数、学">
 <meta itemprop="datePublished" content="2020-01-24T11:35:07&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-24T11:35:07&#43;08:00" />
-<meta itemprop="wordCount" content="623">
+<meta itemprop="wordCount" content="803">
 
 
 
@@ -124,7 +124,7 @@
         <div class="post-category">
             <a href="/categories/%E4%B8%9A%E5%8A%A1%E6%80%BB%E7%BB%93/"> 业务总结 </a>
             </div>
-          <span class="more-meta"> 623 words </span>
+          <span class="more-meta"> 803 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -142,6 +142,9 @@
 <p>2、个体数据是不同用户需要显示不同数据，比如用户类别，购买课程用户、看过视频未购买课程用户、新用户。先计算核心用户即购课用户和三个月内登录用户，去重，做了用户数据是否在数据库表的判断，20分钟可能执行不完，执行结束在redis ha保存一个数值。后面又把数据库数据保存到redis。这块目前比较好的方案是阿里云MaxCompute，先计算所有登录用户数据，保存到数据库，再保存到redis</p>
 <p>3、统计数据主要用于统计PV、UV、分享人数，也是在DLA统计，产品偶尔会要看下数据。常规的用户id、分享用户id，两个字段，sql count、distinct基本上可以搞定</p>
 <p>链接通过公众号文章推送，用golang.org/x/time/rate做了限流，阿里云有工具可以做压测</p>
+<hr>
+<p>新项目又做了一次年度报告，这次有了一些变化，值得记录一下。</p>
+<p>由于sql方面的需求不少，找了一个数据分析的。这次年报的数据由新同事提供，表由后端设计。建一张表，每个人一条记录。后端写一个接口，先从redis取数据，如果没有就从数据库取，然后存到redis。年报会以h5链接的方式发送到用户群，第一次点击会有一些量，所以另外再写一个脚本接口，用于redis数据预热。</p>
 
     </div>
 
@@ -214,7 +217,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021
+    2022
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
