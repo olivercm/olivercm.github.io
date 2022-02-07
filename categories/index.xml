@@ -6,10 +6,19 @@
     <description>Recent content in Categories on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Feb 2022 11:51:03 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Feb 2022 14:42:54 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>问题解决</title>
+      <link>http://localhost:1313/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
+      <pubDate>Mon, 07 Feb 2022 14:42:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>业务总结</title>
@@ -44,15 +53,6 @@
       <pubDate>Tue, 11 May 2021 10:46:14 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/%E4%BC%98%E5%8C%96/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>问题解决</title>
-      <link>http://localhost:1313/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</link>
-      <pubDate>Wed, 24 Feb 2021 16:32:42 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</guid>
       <description></description>
     </item>
     

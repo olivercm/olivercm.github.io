@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微信小程序 on CM的博客</title>
+    <link>http://localhost:1313/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+    <description>Recent content in 微信小程序 on CM的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Feb 2022 14:42:54 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信小程序获取手机号aes解密失败，报-41003</title>
+      <link>http://localhost:1313/post/solve-problem-wechat-mina-program-mobile-aes-failed/</link>
+      <pubDate>Mon, 07 Feb 2022 14:42:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/solve-problem-wechat-mina-program-mobile-aes-failed/</guid>
+      <description>场景： 点击进入小程序页面，页面有需要用户手机号，调起小程序自带的获取手机号，然后支付。 结果发现小程序获取手机号aes解密失败，报-41003</description>
+    </item>
+    
+  </channel>
+</rss>

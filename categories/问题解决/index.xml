@@ -6,10 +6,19 @@
     <description>Recent content in 问题解决 on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Feb 2021 16:32:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Feb 2022 14:42:54 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>微信小程序获取手机号aes解密失败，报-41003</title>
+      <link>http://localhost:1313/post/solve-problem-wechat-mina-program-mobile-aes-failed/</link>
+      <pubDate>Mon, 07 Feb 2022 14:42:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/solve-problem-wechat-mina-program-mobile-aes-failed/</guid>
+      <description>场景： 点击进入小程序页面，页面有需要用户手机号，调起小程序自带的获取手机号，然后支付。 结果发现小程序获取手机号aes解密失败，报-41003</description>
+    </item>
     
     <item>
       <title>解决前端获取下一页，列表数据重复</title>
