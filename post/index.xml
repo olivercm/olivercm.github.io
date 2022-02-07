@@ -6,10 +6,19 @@
     <description>Recent content in Posts on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Jul 2021 16:13:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Feb 2022 11:51:03 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>多级评论架构设计</title>
+      <link>http://localhost:1313/post/multi-level-comment/</link>
+      <pubDate>Mon, 07 Feb 2022 11:51:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/multi-level-comment/</guid>
+      <description>公司接了一个小项目，项目里的多级评论有些技巧，值得写一篇文章记录。 需求是帖子下的评论，先看下设计图： 网上调研了一番，结合当前业务情况，发现一</description>
+    </item>
     
     <item>
       <title>使用mq实现数据自动分配</title>
