@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>架构 on CM的博客</title>
+    <link>http://localhost:1313/categories/%E6%9E%B6%E6%9E%84/</link>
+    <description>Recent content in 架构 on CM的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jun 2022 21:44:49 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2022架构优化</title>
+      <link>http://localhost:1313/post/2022-architecture-optimization/</link>
+      <pubDate>Mon, 20 Jun 2022 21:44:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2022-architecture-optimization/</guid>
+      <description>经历了在线教育行业“双减”，公司转型成人教育，再转型到直播，终于方向更有确定性，可以喘口气，是时候还技术债了。 1、web框架统一。之前用的e</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content on CM的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Feb 2022 14:42:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jun 2022 21:44:49 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2022架构优化</title>
+      <link>http://localhost:1313/post/2022-architecture-optimization/</link>
+      <pubDate>Mon, 20 Jun 2022 21:44:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2022-architecture-optimization/</guid>
+      <description>经历了在线教育行业“双减”，公司转型成人教育，再转型到直播，终于方向更有确定性，可以喘口气，是时候还技术债了。 1、web框架统一。之前用的e</description>
+    </item>
     
     <item>
       <title>微信小程序获取手机号aes解密失败，报-41003</title>

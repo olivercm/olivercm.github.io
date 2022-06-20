@@ -2,29 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://localhost:1313/post/2022-architecture-optimization/</loc>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2022-02-07T14:42:54+08:00</lastmod>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2022-02-07T14:42:54+08:00</lastmod>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2022-02-07T14:42:54+08:00</lastmod>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2022-02-07T14:42:54+08:00</lastmod>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E6%9E%B6%E6%9E%84/</loc>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%9E%B6%E6%9E%84%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2022-06-20T21:44:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
