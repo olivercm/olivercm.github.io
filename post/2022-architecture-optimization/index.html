@@ -48,7 +48,7 @@
 <meta itemprop="description" content="经历了在线教育行业“双减”，公司转型成人教育，再转型到直播，终于方向更有确定性，可以喘口气，是时候还技术债了。 1、web框架统一。之前用的e">
 <meta itemprop="datePublished" content="2022-06-20T21:44:49&#43;08:00" />
 <meta itemprop="dateModified" content="2022-06-20T21:44:49&#43;08:00" />
-<meta itemprop="wordCount" content="829">
+<meta itemprop="wordCount" content="799">
 
 
 
@@ -124,7 +124,7 @@
         <div class="post-category">
             <a href="/categories/%E6%9E%B6%E6%9E%84/"> 架构 </a>
             </div>
-          <span class="more-meta"> 829 words </span>
+          <span class="more-meta"> 799 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -138,9 +138,9 @@
 </div>
     <div class="post-content">
       <p>经历了在线教育行业“双减”，公司转型成人教育，再转型到直播，终于方向更有确定性，可以喘口气，是时候还技术债了。</p>
-<p>1、web框架统一。之前用的<a href="https://github.com/labstack/echo">echo</a>、<a href="https://graphql.org/">GraphQL</a>、还有一套基于grpc自研的网关。现在统一用自研网关。统一后，开发心智负担小，效率也高。自研使用简单，但需要考虑后期维护。如果没有自研那套，<a href="https://github.com/grpc-ecosystem/grpc-gateway">grpc-gateway</a>是一个不错的选择，既有grpc，又支持restful api，还有swagger文档支持。</p>
+<p>1、web框架统一。之前用的<a href="https://github.com/labstack/echo">echo</a>、<a href="https://graphql.org/">GraphQL</a>、还有一套基于grpc自研的网关。现在统一用自研网关。统一后，开发心智负担小，效率也高。自研使用简单，但需要考虑后期维护。</p>
 <p>2、数据库操作统一。之前用的<a href="https://github.com/go-gorm/gorm">gorm</a>、<a href="https://github.com/jmoiron/sqlx">sqlx</a>。现在统一用sqlx。orm之类的，慢sql不容易找到对应的代码，尤其是大仓的。sqlx使用简单，直接写sql语句，查找方便</p>
-<p>3、延续之前的大仓模式。之前没有区分前后台，只是按照业务模块拆分服务。现在后台单独一个服务，前台按业务拆分模块。避免后台对前台业务的影响</p>
+<p>3、延续之前的大仓模式，以发布对应的服务分支的方式发布服务。之前没有区分前后台，只是按照业务模块拆分服务。现在后台单独一个服务，前台按业务拆分模块。避免后台对前台业务的影响</p>
 <p>4、消息推送单独分出一个服务。使用<a href="https://docs.nats.io/">nats</a>, 发送最简单的业务信息到对应的服务，服务中做好封装，数据处理。由于是消息队列，可以不同等待返回。</p>
 <p>5、单独建一个biz目录，存放对应的业务包及其下的dao、model，方便多个服务公用。model修改时，也只需要修改一处。</p>
 <p>6、单独一个服务，包含第三方回调、cdn临时密钥、发送短信验证码等基础服务。</p>
@@ -148,6 +148,7 @@
 <p>8、数据库表命名带上服务名前缀，方便查找。时间统一时间戳，金额以分为单位。编码统一utf8mb4、general_ci。</p>
 <p>9、使用<a href="https://github.com/google/ko">ko</a>构建容器镜像。今后docker可能不是必须的了，一般应用ko可以满足。</p>
 <p>如果从头来过，应该更早把技术债还了，这样应该会轻松很多。</p>
+<p>后台前端开发框架也改成了<a href="https://umijs.org/">UmiJS</a></p>
 <p>最后推荐两个看了有点感触的专栏，<a href="https://time.geekbang.org/column/intro/100099801?tab=catalog">郭东白的架构课</a>、<a href="https://time.geekbang.org/column/intro/100022301?tab=catalog">10x 程序员工作法</a>。</p>
 
     </div>
